@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@use "sass:map"
+@use "sass:math"
+@import "assets/styles/libs/vars"
+@import "assets/styles/libs/functions"
+@import "assets/styles/libs/mixins"
+@import "assets/styles/libs/vendor"
+@import "assets/styles/libs/breakpoints"
+@import "assets/styles/libs/html-grid"
+@import "assets/css/fontawesome-all.min.css"
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic')
+
+@mixin inner 
+    >.inner
+        @include padding(4em, 0)
+        margin: 0 auto
+        max-width: _size(inner)
+        width: calc(100% - 6em)
+
+        @include breakpoint('<=small')
+            @include padding(3em, 0)
+            width: calc(100% - 3em)
+
+//base
+@import "./assets/styles/base/reset"
+@import "./assets/styles/base/page"
+@import "./assets/styles/base/typography"
+
+//components
+@import "./assets/styles/components/actions"
+@import "./assets/styles/components/box"
+@import "./assets/styles/components/button"
+@import "./assets/styles/components/contact-method"
+@import "./assets/styles/components/form"
+@import "./assets/styles/components/icon"
+@import "./assets/styles/components/icons"
+@import "./assets/styles/components/image"
+@import "./assets/styles/components/list"
+@import "./assets/styles/components/pagination"
+@import "./assets/styles/components/row"
+@import "./assets/styles/components/section"
+@import "./assets/styles/components/spotlights"
+@import "./assets/styles/components/table"
+@import "./assets/styles/components/tiles"
